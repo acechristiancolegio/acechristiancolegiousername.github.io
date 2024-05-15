@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="slot.css">
+    <!-- Add the background music -->
+    <audio id="background-music" loop autoplay>
+        <source src="background M.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        /* Wallet display */
+        .wallet {
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Shadow */
+        }
+
+        .wallet span {
+            margin-right: 10px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .wallet span#balance {
+            color: #00ff00; /* Green color for balance */
+        }
+
+        .wallet span#bet-amount {
+            color: #ff6666; /* Red color for bet amount */
+        }
+    </style>
+</head>
+<body>
+    <div class="slot-machine">
+        <!-- Slot machine elements -->
+        <div class="slot"><img src="1.jfif" alt="Image"></div>
+        <div class="slot"><img src="20.jpg" alt="Image"></div>
+        <div class="slot"><img src="10.jpg" alt="Image"></div>
+        <div class="slot"><img src="1.jfif" alt="Image"></div>
+        <div class="slot"><img src="20.jpg" alt="Image"></div>
+        <div class="slot"><img src="10.jpg" alt="Image"></div>
+        <div class="slot"><img src="1.jfif" alt="Image"></div>
+        <div class="slot"><img src="20.jpg" alt="Image"></div>
+        <div class="slot"><img src="10.jpg" alt="Image"></div>
+        <div class="slot"><img src="1.jfif" alt="Image"></div>
+        <div class="slot"><img src="20.jpg" alt="Image"></div>
+        <div class="slot"><img src="10.jpg" alt="Image"></div>
+        <div class="slot"><img src="1.jfif" alt="Image"></div>
+        <div class="slot"><img src="20.jpg" alt="Image"></div>
+        <div class="slot"><img src="10.jpg" alt="Image"></div>
+        <div class="slot"><img src="1.jfif" alt="Image"></div>
+    </div>
+
+    <div class="controls">
+        <button onclick="spin()">Spin</button>
+        <button class="auto-spin-button" onclick="toggleAutoSpin()">Start Auto Spin</button>
+        <button onclick="placeBet()">Place Bet</button>
+    </div>
+
+    <!-- Music button with icon -->
+    <div class="music">
+        <button id="toggle-background-music"><i class="fas fa-music"></i></button>
+    </div>
+
+    <!-- Wallet for displaying balance and bet amount -->
+    <div class="wallet">
+        <span>Balance:</span><span id="balance">$1000</span>
+        <span>Bet Amount:</span><span id="bet-amount">$0</span>
+    </div>
+
+    <div id="confetti-container"></div>
+    <audio id="win-sound">
+        <source src="audiomass-output.mp3" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="slot.js"></script>
+</body>
+</html>
